@@ -10,7 +10,21 @@ function processArray(numbers) {
   }
   
  
-  const inputArray = [8, 2, 7, 4, 6, 5, 3, 2, 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
-  const resultArray = processArray(inputArray);
-  console.log(resultArray); 
+  const takeArray = [8, 2, 7, 4, 6, 5, 3, 2, 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
+  const finaltArray = processArray(takeArray);
+  console.log(finaltArray); 
+
+function formatArrayStrings(strings, numbers) {
+    return strings.map((str, index) => {
+        if (numbers[index] % 2 === 0) {
+            return str.toUpperCase();
+        } else {
+            return str.toLowerCase();
+        }
+    });
+}
+
+const stringsArray = ["Bakor", "Universe", "GangHub", "Tracy"];
+const formattedArray = formatArrayStrings(stringsArray, finaltArray);
+console.log(formattedArray);
   
